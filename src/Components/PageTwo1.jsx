@@ -14,22 +14,22 @@ import SliderSeven from "./SliderSeven.jsx";
 // const sliders = [<Slider />, <SliderTwo />, <SliderThree />, <SliderFour />, <SliderFive />];
 const sliders = [
   // anar
-  //<SliderTwo />,
+  <SliderTwo />,
   
   // lemon
-  //<Slider />,
+  <Slider />,
   
   // Mix
   <SliderSix />,
 
   // guava
-  //<SliderThree />, 
+  <SliderThree />, 
 
   // mango
-  // <SliderFive />,
+  <SliderFive />,
 
    // lychee
-   //<SliderFour />,
+  <SliderFour />,
 
 ];
 // const sliders = [<Slider />];
