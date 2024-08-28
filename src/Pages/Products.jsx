@@ -13,6 +13,9 @@ import p3 from "../../public/p3.png";
 import p4 from "../../public/p4.png";
 import p6 from "../../public/p6.png";
 import p7 from "../../public/p7.png";
+import w1 from "../../public/w1.png";
+import w2 from "../../public/w2.png";
+import w3 from "../../public/w3.png";
 
 const products = [
   
@@ -96,6 +99,27 @@ const plusProducts = [
   },
 ];
 
+const water = [
+  {
+    image: w1,
+    backgroundColor: "edf7ed",
+    price: "6.00",
+    desc: "Groovy 200 ML",
+  },
+  {
+    image: w2,
+    backgroundColor: "edf7ed",
+    price: "10.00",
+    desc: "Groovy 500 ML",
+  },
+  {
+    image: w3,
+    backgroundColor: "edf7ed",
+    price: "20.00",
+    desc: "Groovy 1000 ML",
+  }
+];
+
 const Products = () => {
   return (
     <div className="relative w-full overflow-hidden pt-24">
@@ -126,6 +150,22 @@ const Products = () => {
               backgroundColor={product.backgroundColor}
               price={product.price}
               desc={product.desc}
+            />
+          </div>
+        ))}
+      </div>
+
+      <h1 className="text-center font-semibold text-4xl mt-8">
+        Water
+      </h1>
+      <div className="relative flex flex-wrap px-16">
+        {water.map((water, index) => (
+          <div key={index} className="p-2">
+            <ProductCard
+              image={water.image}
+              backgroundColor={water.backgroundColor}
+              price={water.price}
+              desc={water.desc}
             />
           </div>
         ))}

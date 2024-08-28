@@ -21,8 +21,8 @@ const OurStory = () => {
           create an honest & impactful brand to reflect their uncompromising
           approach to creating the purest juices. The brand unleashes freshness
           from the very first drop, delivering an intense hit of purity that
-          makes you go Groovy. Located in the Greater Delhi Area, Groovy is
-          dedicated to providing high-quality, natural juices.
+          makes you go Groovy. Groovy is dedicated to providing high-quality,
+          natural juices.
         </p>
       </div>
     </div>
