@@ -4,7 +4,7 @@ import { LuShoppingBag } from "react-icons/lu";
 
 const SliderThree = () => {
   return (
-    <div className="h-screen pt-32 w-full flex flex-col md:flex-row items-center justify-between p-6 md:pl-16 bg-[#91DB68]">
+    <div className="h-screen pt-28 w-full flex flex-col md:flex-row items-center justify-between p-6 md:pl-16 bg-[#91DB68]">
       <div className="text-center md:text-left">
         <div className="font-oswald font-bold uppercase text-4xl md:text-7xl text-white mb-4 md:mb-0">
           <h1>
@@ -22,7 +22,7 @@ const SliderThree = () => {
           </button>
         </div>
       </div>
-      <img src={guava} alt="Guava" className="h-64 md:h-full md:mt-16 pb-4 md:pb-16 object-contain" />
+      <img src={guava} alt="Guava" className="h-64 md:h-full md:mt-16 pb-4 md:pb-12 object-contain" />
     </div>
   );
 };

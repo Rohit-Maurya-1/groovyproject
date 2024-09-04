@@ -39,7 +39,7 @@ const SliderFive = () => {
           </button>
         </div>
       </div>
-      <img ref={imageRef} src={mango} alt="Mango" className="h-64 md:h-full mt-8 md:mt-16 object-contain" />
+      <img ref={imageRef} src={mango} alt="Mango" className="h-64 md:h-full mt-8 md:mt-8 object-contain" />
     </div>
   );
 };

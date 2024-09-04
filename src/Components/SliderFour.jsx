@@ -22,7 +22,7 @@ const SliderFour = () => {
           </button>
         </div>
       </div>
-      <img src={lychee} alt="Lychee" className="h-64 md:h-full mt-8 md:mt-16 object-contain" />
+      <img src={lychee} alt="Lychee" className="h-64 md:h-full mt-8 md:mt-8 object-contain" />
     </div>
   );
 };

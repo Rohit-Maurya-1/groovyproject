@@ -22,7 +22,7 @@ const SliderSix = () => {
           </button>
         </div>
       </div>
-      <img src={MixFruits_web} alt="Mix Fruits" className="h-64 md:h-full mt-8 md:mt-16 object-contain" />
+      <img src={MixFruits_web} alt="Mix Fruits" className="h-64 md:h-full mt-8 md:mt-8 object-contain" />
     </div>
   );
 };
