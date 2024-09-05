@@ -21,12 +21,12 @@ const locations = [
   {
     title: "Manufacturing Unit 1",
     timings: "Mon-Sat 9am to 5pm.",
-    address: "UttaraKhand",
+    address: "Rudra Pur UttaraKhand",
   },
   {
     title: "Manufacturing Unit 2",
     timings: "Mon-Sat 9am to 5pm.",
-    address: "Jammu Katra",
+    address: "katra , jammu kashmir",
   },
 ];
 
