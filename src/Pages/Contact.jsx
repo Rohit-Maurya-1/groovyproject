@@ -210,13 +210,13 @@ export default function Contact() {
         )}
         {/* Hero Map */}
         <div
-          className="px-16 pt-32 bg-fixed bg-cover bg-center "
+          className="px-16 pt-32 bg-fixed bg-contain bg-no-repeat bg-center "
           style={{
             backgroundImage: `url(${bgg2})`,
           }}
         >
-          <div className="w-full backdrop-blur-sm">
-            <div className="flex flex-col space-y- pb-1 md:pt-16">
+          <div className="w-full mt-2 backdrop-blur-sm">
+            <div className="flex flex-col space-y- pb-1 md:pt-24">
               <p className="text-sm text-center font-bold text-gray-900 md:text-4xl md:py-4 backdrop-blur-sm">
                 Get in touch
               </p>

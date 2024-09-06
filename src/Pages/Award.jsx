@@ -39,7 +39,7 @@ const Award = () => {
 
   return (
     <>
-      <div className="pt-20 bg-[#F3F1F8]">
+      <div className="pt-20 bg-[#f49090]">
         <TimelineComponent />
 
         <div className="w-full flex flex-col lg:flex-row px-4 lg:px-16 bg-[#abf063] py-4">
