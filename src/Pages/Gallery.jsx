@@ -31,16 +31,16 @@ import pb8 from "../../public/pb8.jpg";
 import pb9 from "../../public/pb9.jpg";
 import pb10 from "../../public/pb10.jpg";
 import pb11 from "../../public/pb11.jpg";
-import pb12 from "../../public/pb12.jpg";
+// import pb12 from "../../public/pb12.jpg";
 import pb13 from "../../public/pb13.jpg";
+import IMG6 from "../../public/IMG6.jpg";
 import pb14 from "../../public/pb14.jpg";
-import pb15 from "../../public/pb15.jpg";
 
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const dist = [a, b, c, d,e, f, g,h,dl1,dl2,dl3,dl4,dl5,dl6,dl7,dl8,dl9,dl10,dl12,dl13,dl14,pb1,pb2,pb3,pb5,pb6,pb7,pb8,pb9,pb10,pb11,pb12,pb13,pb14,pb15];
+  const dist = [a, b, c, d,e, f, g,h,dl1,dl2,dl3,dl4,dl5,dl6,dl7,dl8,dl9,dl10,dl12,dl13,dl14,pb1,pb2,pb3,pb5,pb6,pb7,pb8,pb9,pb10,pb11,pb13,IMG6,pb14];
 
   const handleImageClick = (image) => {
     setSelectedImage(image);
