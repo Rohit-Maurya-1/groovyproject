@@ -16,6 +16,12 @@ const OurStory = () => {
       </div>
       <div className="w-full lg:w-1/2 flex flex-col gap-4 px-4 lg:px-8 text-md">
         <p className="text-lg lg:text-xl text-justify">
+          <span className="bg-zinc-700 text-white px-2">We Are Groovy</span> {" "}
+          We are nature lovers on a mission to deliver the goodness of fruits. 
+          We believe in the transformative power of stories — and in our drinks, 
+          we have weaved the stories of childhood flavours.
+        </p>
+        <p className="text-lg lg:text-xl text-justify">
           The journey of Groovy starts from a dream of{" "}
           <span className="bg-zinc-800 text-white px-2 ">2 brothers</span> to
           create an honest & impactful brand to reflect their uncompromising
