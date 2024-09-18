@@ -20,7 +20,7 @@ const CartPage = () => {
     );
   };
 
-  const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const totalPrice = cartItems.reduce((acc, item) => acc + item.price * (item.quantity||1), 0);
   return (
     <div className="container mx-auto px-4 py-8 pt-24">
       <h1 className="font-semibold text-4xl text-center mb-4">Carts</h1>
@@ -55,6 +55,10 @@ const CartPage = () => {
                             value={item.quantity}
                             onChange={(e)=>{
                               changeQuantity(item.id, parseInt(e.target.value))
+                            }}
+                            onBlur={(e)=>{
+                              if(!parseInt(e.target.value))
+                                 changeQuantity(item.id,1)
                             }}
                             min={1}
                             class="w-12 border text-center"

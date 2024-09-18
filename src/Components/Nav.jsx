@@ -194,7 +194,7 @@ const Nav = () => {
             <span className="relative">
               <LuShoppingCart className="text-xl" />
               <i className="absolute" style={{ top: -15, right: -10 }}>
-                {cartItems?.length && cartItems?.length}
+                {cartItems?.length ? cartItems?.length:''}
               </i>
             </span>
           </NavLink>
