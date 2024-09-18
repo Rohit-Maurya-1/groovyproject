@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { FiSearch } from "react-icons/fi";
 import { LuShoppingCart } from "react-icons/lu";
 import { GrFavorite } from "react-icons/gr";
@@ -6,8 +6,10 @@ import { FaRegUser, FaBars, FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import "../index.css";
 import logo from "../../public/logo.png";
+import { CartContext } from "../context/CartContext";
 
 const Nav = () => {
+  const { cartItems } = useContext(CartContext);
   const [isScrolled, setIsScrolled] = useState(false);
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -188,7 +190,14 @@ const Nav = () => {
 
         <div className="hidden lg:flex gap-8 items-center">
           <FiSearch className="text-xl font-bold" />
-          <LuShoppingCart className="text-xl" />
+          <NavLink to={"/carts"}>
+            <span className="relative">
+              <LuShoppingCart className="text-xl" />
+              <i className="absolute" style={{ top: -15, right: -10 }}>
+                {cartItems?.length && cartItems?.length}
+              </i>
+            </span>
+          </NavLink>
           <GrFavorite className="text-xl" />
           <div className="bg-zinc-800 p-2 text-white rounded-full">
             <FaRegUser className="text-base" />

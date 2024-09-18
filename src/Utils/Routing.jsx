@@ -8,6 +8,8 @@ import About from "../Pages/About";
 import Media from "../Pages/Media";
 import OurStory from "../Pages/OurStory";
 import Award from "../Pages/Award";
+import CartPage from "../Pages/Carts";
+import CheckoutPage from "../Pages/Checkout";
 
 const Routing = () => {
   return (
@@ -20,6 +22,8 @@ const Routing = () => {
         <Route path="/products" element={<Products />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/media" element={<Media />} />
+        <Route path="/carts" element={<CartPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
       </Routes>
     </>
   );

@@ -131,9 +131,9 @@ export default function MarqueeDemo() {
         </h1>
 
         <Marquee pauseOnHover className="[--duration:50s]">
-          {firstRow.map((review) => (
-            <ReviewCard key={review.username} {...review} />
-          ))}
+          {firstRow.map((review,index) => 
+            <ReviewCard key={index} {...review} />
+          )}
         </Marquee>
 
         <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r "></div>
