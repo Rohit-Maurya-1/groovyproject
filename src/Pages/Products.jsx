@@ -59,7 +59,7 @@ const Products = () => {
               backgroundColor={water.backgroundColor}
               price={water.price}
               desc={water.desc}
-              add={()=>addProduct(product)}
+              add={()=>addProduct(water)}
             />
           </div>
         ))}
