@@ -71,7 +71,7 @@ const CheckoutPage = () => {
 
   const close = () => {
     setIsOpen(false);
-    navigate("/");
+    navigate("/products");
   };
 
   return (
@@ -293,7 +293,7 @@ const CheckoutPage = () => {
                       use your Order ID as the payment reference.
                     </p>
                   </div>
-                  <div>
+                  {/* <div>
                     <input
                       type="radio"
                       id="cod"
@@ -306,7 +306,7 @@ const CheckoutPage = () => {
                     <label htmlFor="cod" className="text-gray-700">
                       Cash on delivery
                     </label>
-                  </div>
+                  </div> */}
                 </div>
 
                 <button

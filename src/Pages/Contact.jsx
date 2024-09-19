@@ -233,7 +233,7 @@ export default function Contact() {
                       Please email contact form and we will be assist you. We
                       wotk with you.
                     </p>
-                    <h3 className="mt-2 text-base font-semibold text-black">
+                    <h3 className="mt-2 text-base font-semibold text-black" style={{wordBreak:'break-all'}}>
                       sales@enhazbeverages.com
                     </h3>
                   </div>
