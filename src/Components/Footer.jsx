@@ -5,23 +5,21 @@ import { FaInstagram, FaLinkedin, FaFacebook, FaTwitter } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer
-      className="relative bg-zinc-800 py-8 text-white  bg-fixed bg-cover bg-center"
-      // style={{
-      //   backgroundImage:
-      //     "url('https://embedsocial.com/admin/mediacdn/feed-media/18006/18006077030309004/image_0_large.webp')",
-      // }}
+      className="relative bg-zinc-800 py-8 text-white bg-fixed bg-cover bg-center"
     >
-      <div className="container mx-auto w-full flex flex-col gap-8 md:flex-row justify-center items-center">
-        <div className="flex lex-col w-1/4 items-start justfy-center mb-6 md:mb-0">
+      <div className="container mx-auto w-full flex flex-col md:flex-row gap-8 justify-center items-center">
+        {/* Logo Section */}
+        <div className="flex flex-col w-full md:w-1/4 items-center md:items-start mb-6 md:mb-0">
           <img
             src="../../logo.png"
             alt="Fruits for Drinks"
             className="h-16 mb-4"
           />
-          
         </div>
-        <div className="flelex-col w-1/2 items-center mb- md:mb-0">
-          <ul className="text-center space-y2 flex items-center justify-between">
+
+        {/* Navigation Links Section */}
+        <div className="flex flex-col w-full md:w-1/2 items-center mb-6 md:mb-0">
+          <ul className="text-center space-y-2 md:space-y-0 md:space-x-4 flex flex-col md:flex-row items-center justify-center">
             <li>
               <a href="/" className="hover:text-blue-600">
                 Home
@@ -54,7 +52,9 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="flex flex-col w-1/4 items-center">
+
+        {/* Social Media Section */}
+        <div className="flex flex-col w-full md:w-1/4 items-center">
           <div className="flex space-x-4 mb-4">
             <a
               href="https://instagram.com"

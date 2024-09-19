@@ -22,15 +22,13 @@ const SliderFive = () => {
   return (
     <div className="h-screen pt-32 w-full flex flex-col md:flex-row items-center justify-between p-6 md:pl-16 bg-[#FFDA55]">
       <div className="text-center md:text-left">
-        <div ref={textRef} className="font-oswald font-semibold uppercase text-4xl md:text-7xl text-white">
+        <div ref={textRef} className="font-oswald font-semibold uppercase text-3xl md:text-5xl lg:text-7xl text-white">
           <h1 className='text-[#c0732b]'>
-            Made With 
-             Tropical <br className="hidden md:block" /> <span className="text-[#ffffff]">
-              Mango
-            </span>{" "}
+            Made With Tropical <br className="hidden md:block" /> 
+            <span className="text-[#ffffff]">Mango</span>
           </h1>
         </div>
-        <div ref={subTextRef} className="font-oswald font-semibold uppercase text-2xl md:text-4xl text-gray-700 mt-4 md:mt-0">
+        <div ref={subTextRef} className="font-oswald font-semibold uppercase text-xl md:text-3xl lg:text-4xl text-gray-700 mt-4 md:mt-0">
           Groovy Fruit Drink - Mango
         </div>
         <div ref={buttonRef} className="flex justify-center md:justify-start uppercase mt-4 md:mt-8">
