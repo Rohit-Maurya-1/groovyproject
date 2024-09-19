@@ -17,7 +17,6 @@ import dl7 from "../../public/dl7.jpg";
 import dl8 from "../../public/dl8.jpg";
 import dl9 from "../../public/dl9.jpg";
 import dl10 from "../../public/dl10.jpg";
-// import dl11 from "../../public/dl11.jpg";
 import dl12 from "../../public/dl12.jpg";
 import dl13 from "../../public/dl13.jpg";
 import dl14 from "../../public/dl14.jpg";
@@ -31,16 +30,14 @@ import pb8 from "../../public/pb8.jpg";
 import pb9 from "../../public/pb9.jpg";
 import pb10 from "../../public/pb10.jpg";
 import pb11 from "../../public/pb11.jpg";
-// import pb12 from "../../public/pb12.jpg";
 import pb13 from "../../public/pb13.jpg";
 import IMG6 from "../../public/IMG6.jpg";
 import pb14 from "../../public/pb14.jpg";
 
-
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const dist = [a, b, c, d,e, f, g,h,dl1,dl2,dl3,dl4,dl5,dl6,dl7,dl8,dl9,dl10,dl12,dl13,dl14,pb1,pb2,pb3,pb5,pb6,pb7,pb8,pb9,pb10,pb11,pb13,IMG6,pb14];
+  const dist = [a, b, c, d, e, f, g, h, dl1, dl2, dl3, dl4, dl5, dl6, dl7, dl8, dl9, dl10, dl12, dl13, dl14, pb1, pb2, pb3, pb5, pb6, pb7, pb8, pb9, pb10, pb11, pb13, IMG6, pb14];
 
   const handleImageClick = (image) => {
     setSelectedImage(image);
@@ -52,18 +49,18 @@ const Gallery = () => {
 
   return (
     <div className="pt-16">
-      <div className="flex px-16 flex-col items-center">
-        <h2 className="mt-8 text-4xl items-center justify-center leading-tight w-full text-black sm:text-4xl lg:text-4xl flex flex-col mb-4">
-          <p className="font-semibold text-4xl">Our Distributors</p>
+      <div className="flex px-4 sm:px-10 md:px-16 flex-col items-center">
+        <h2 className="mt-8 text-3xl sm:text-4xl md:text-5xl leading-tight w-full text-black flex flex-col mb-4">
+          <p className="font-semibold text-center">Our Distributors</p>
         </h2>
-        <div className="flex flex-wrap justify-evenl items-stretch rounded">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
           {dist.map((val, key) => {
             return (
-              <div key={key} className="rounded-xl m-1">
+              <div key={key} className="rounded-xl">
                 <img
                   src={val}
                   alt={`Distributor ${key}`}
-                  className="w-48 h-48 object-cover cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105"
+                  className="w-full h-40 sm:h-48 object-cover cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105"
                   onClick={() => handleImageClick(val)}
                 />
               </div>

@@ -6,14 +6,14 @@ const SliderSix = () => {
   return (
     <div className="h-screen pt-32 md:pt-32 w-full flex flex-col md:flex-row items-center justify-between p-6 md:pl-16 bg-[#F8931F]">
       <div className="text-center md:text-left">
-        <div className="font-oswald font-semibold uppercase text-4xl md:text-7xl text-white mb-4 md:mb-0">
+        <div className="font-oswald font-semibold uppercase text-3xl md:text-5xl lg:text-7xl text-white mb-4 md:mb-0">
           <h1 className="text-orange-700">
             Made With Fresh <br className="hidden md:block" />
             & Ripe <br className="hidden md:block" />
-            <span className="text-[#FFF531]">mix fruits</span>
+            <span className="text-[#FFF531]">Mix Fruits</span>
           </h1>
         </div>
-        <div className="font-oswald font-semibold uppercase text-2xl md:text-4xl text-gray-700 mt-4 md:mt-0">
+        <div className="font-oswald font-semibold uppercase text-xl md:text-3xl lg:text-4xl text-gray-700 mt-4 md:mt-0">
           Groovy Fruit Drink - Mix
         </div>
         <div className="flex justify-center md:justify-start uppercase mt-4 md:mt-8">

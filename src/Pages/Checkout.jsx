@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
+import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
 import { CartContext } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
 import { collection, addDoc } from "firebase/firestore";
@@ -11,7 +11,7 @@ const CheckoutPage = () => {
     (acc, item) => acc + item.price * (item.quantity || 1),
     0
   );
-  let [isOpen, setIsOpen] = useState(false)
+  let [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: "",
@@ -44,42 +44,41 @@ const CheckoutPage = () => {
     setPaymentMethod(e.target.value);
   };
 
-  // Handler for form submission (you can replace with actual submission logic)
+  // Handler for form submission
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
-      const products= cartItems.map((p)=>{
-        return {
-          id: p.id,
-          title: p.desc,
-          price: p.price,
-          quantity: p.quantity || 1
-        }
-      })
+      const products = cartItems.map((p) => ({
+        id: p.id,
+        title: p.desc,
+        price: p.price,
+        quantity: p.quantity || 1,
+      }));
       const docRef = await addDoc(collection(db, "OrderCheckout"), {
         ...formData,
         orderAt: new Date().toDateString(),
         paymentMethod,
         totalPrice,
-        products
+        products,
       });
       if (docRef.id) {
         setCartItems([]);
         localStorage.setItem("carts", JSON.stringify([]));
-        setIsOpen(true)
+        setIsOpen(true);
       }
     } catch (error) {}
   };
-  const close=()=> {
+
+  const close = () => {
     setIsOpen(false);
-    navigate("/");
-  }
+    navigate("/products");
+  };
 
   return (
     <div className="container mx-auto px-4 py-8 pt-24">
       <h1 className="font-semibold text-4xl text-center mb-4">Checkout</h1>
-      <div className="gap-4 px-16">
-        <div className="container mx-auto my-8">
+      <div className="gap-4">
+        <div className="my-8">
           <form onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Billing Details */}
@@ -259,7 +258,7 @@ const CheckoutPage = () => {
                           {cartItem?.desc} × {cartItem.quantity || 1}
                         </td>
                         <td className="py-2">
-                          ₹ {cartItem.price * cartItem.quantity || 1}
+                          ₹ {cartItem.price * (cartItem.quantity || 1)}
                         </td>
                       </tr>
                     ))}
@@ -294,7 +293,7 @@ const CheckoutPage = () => {
                       use your Order ID as the payment reference.
                     </p>
                   </div>
-                  <div>
+                  {/* <div>
                     <input
                       type="radio"
                       id="cod"
@@ -307,7 +306,7 @@ const CheckoutPage = () => {
                     <label htmlFor="cod" className="text-gray-700">
                       Cash on delivery
                     </label>
-                  </div>
+                  </div> */}
                 </div>
 
                 <button
