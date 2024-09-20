@@ -15,7 +15,7 @@ const Products = () => {
   };
 
   return (
-    <div className="relative w-full overflow-hidden pt-24">
+    <div className="relative w-full pt-24 px-4 sm:px-8 lg:px-16">
       {/* Heading for PLUS_PRODUCTS */}
       <h1 className="text-center font-semibold text-3xl sm:text-4xl md:text-5xl">
         Our Fruitful
