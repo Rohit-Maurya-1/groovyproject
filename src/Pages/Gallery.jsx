@@ -33,11 +33,19 @@ import pb11 from "../../public/pb11.jpg";
 import pb13 from "../../public/pb13.jpg";
 import IMG6 from "../../public/IMG6.jpg";
 import pb14 from "../../public/pb14.jpg";
+import ngp1 from "../../public/ngp1.jpg";
+import ngp2 from "../../public/ngp2.jpg";
+import ngp3 from "../../public/ngp3.jpg";
+import ngp4 from "../../public/ngp4.jpg";
+import ngp5 from "../../public/ngp5.jpg";
+import ngp6 from "../../public/ngp6.jpg";
+import ngp7 from "../../public/ngp7.jpg";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const dist = [a, b, c, d, e, f, g, h, dl1, dl2, dl3, dl4, dl5, dl6, dl7, dl8, dl9, dl10, dl12, dl13, dl14, pb1, pb2, pb3, pb5, pb6, pb7, pb8, pb9, pb10, pb11, pb13, IMG6, pb14];
+  const dist = [a, b, c, d, e, f, g, h, dl1, dl2, dl3, dl4, dl5, dl6, dl7, dl8, dl9, dl10, dl12, dl13, dl14, pb1, pb2, pb3, pb5, pb6, pb7, pb8, pb9, pb10, pb11, pb13, IMG6, pb14,
+    ngp1,ngp2,ngp3,ngp4,ngp5,ngp6,ngp7];
 
   const handleImageClick = (image) => {
     setSelectedImage(image);
