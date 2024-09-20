@@ -42,17 +42,31 @@ import ngp6 from "../../public/ngp6.jpg";
 import ngp7 from "../../public/ngp7.jpg";
 
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(null); // Index instead of image
 
-  const dist = [a, b, c, d, e, f, g, h, dl1, dl2, dl3, dl4, dl5, dl6, dl7, dl8, dl9, dl10, dl12, dl13, dl14, pb1, pb2, pb3, pb5, pb6, pb7, pb8, pb9, pb10, pb11, pb13, IMG6, pb14,
-    ngp1,ngp2,ngp3,ngp4,ngp5,ngp6,ngp7];
+  const dist = [
+    a, b, c, d, e, f, g, h, dl1, dl2, dl3, dl4, dl5, dl6, dl7, dl8, dl9, dl10, dl12, dl13, dl14,
+    pb1, pb2, pb3, pb5, pb6, pb7, pb8, pb9, pb10, pb11, pb13, IMG6, pb14, ngp1, ngp2, ngp3, ngp4, ngp5, ngp6, ngp7,
+  ];
 
-  const handleImageClick = (image) => {
-    setSelectedImage(image);
+  const handleImageClick = (index) => {
+    setSelectedIndex(index); // Set index on click
   };
 
   const closeImage = () => {
-    setSelectedImage(null);
+    setSelectedIndex(null);
+  };
+
+  const showNextImage = () => {
+    if (selectedIndex < dist.length - 1) {
+      setSelectedIndex((prev) => prev + 1);
+    }
+  };
+
+  const showPrevImage = () => {
+    if (selectedIndex > 0) {
+      setSelectedIndex((prev) => prev - 1);
+    }
   };
 
   return (
@@ -69,7 +83,7 @@ const Gallery = () => {
                   src={val}
                   alt={`Distributor ${key}`}
                   className="w-full h-40 sm:h-48 object-cover cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105"
-                  onClick={() => handleImageClick(val)}
+                  onClick={() => handleImageClick(key)} // Pass index instead of image
                 />
               </div>
             );
@@ -77,17 +91,42 @@ const Gallery = () => {
         </div>
       </div>
 
-      {selectedImage && (
+      {selectedIndex !== null && (
         <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
           <div className="relative">
+            {/* Close Button */}
             <button
               className="absolute top-2 right-2 text-white text-5xl font-bold z-50 w-14 h-14"
               onClick={closeImage}
             >
               &times;
             </button>
+
+            {/* Left Arrow */}
+            {selectedIndex > 0 && (
+              <button
+                className="absolute left-2 top-1/2 transform -translate-y-1/2 text-dark-red text-7xl font-bold z-50 w-18 h-18"
+                onClick={showPrevImage}
+                style={{ color: "#8B0000" }} // Dark red color
+              >
+                &#8249;
+              </button>
+            )}
+
+            {/* Right Arrow */}
+            {selectedIndex < dist.length - 1 && (
+              <button
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-dark-red text-7xl font-bold z-50 w-18 h-18"
+                onClick={showNextImage}
+                style={{ color: "#8B0000" }} // Dark red color
+              >
+                &#8250;
+              </button>
+            )}
+
+            {/* Image */}
             <img
-              src={selectedImage}
+              src={dist[selectedIndex]}
               alt="Enlarged"
               className="max-w-full max-h-screen"
             />
