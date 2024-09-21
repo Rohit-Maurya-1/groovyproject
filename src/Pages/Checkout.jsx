@@ -48,12 +48,17 @@ const CheckoutPage = () => {
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
+      if(!cartItems.length){
+        alert("No items in the cart!");
+        return;
+      }
       const products = cartItems.map((p) => ({
         id: p.id,
         title: p.desc,
         price: p.price,
         quantity: p.quantity || 1,
       }));
+
       const docRef = await addDoc(collection(db, "OrderCheckout"), {
         ...formData,
         orderAt: new Date().toDateString(),

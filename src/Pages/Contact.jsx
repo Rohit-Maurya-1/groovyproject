@@ -233,7 +233,10 @@ export default function Contact() {
                       Please email contact form and we will be assist you. We
                       wotk with you.
                     </p>
-                    <h3 className="mt-2 text-base font-semibold text-black" style={{wordBreak:'break-all'}}>
+                    <h3
+                      className="mt-2 text-base font-semibold text-black"
+                      style={{ wordBreak: "break-all" }}
+                    >
                       sales@enhazbeverages.com
                     </h3>
                   </div>
@@ -254,231 +257,235 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <div className="w-full md:pt-8 flex gap-8 px-16">
-          <div className="w-1/2 flex flex-col gap-4">
-            <h1 className="text-2xl flex items-center font-semibold">
-              <MapPin className="h-10 w-10 text-red-500" />
-              Headquarter
-            </h1>
-            <p className="text-xl"> Timings: Mon-Sat 9am to 5pm</p>
-            <p className="text-base">
-              Enhaz Beverages Pvt. Ltd. D-09, Second Floor, Panchsheel Enclave,
-              Above HDFC Bank Ltd, Soami Nagar Branch, New Delhi - 110017
-            </p>
-          </div>
-          <iframe
-            src={embedLink}
-            // width="600"
-            // height="450"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            className="w-1/2 rounded-lg"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Google Map Location"
-          ></iframe>
-        </div>
+        <div className="w-full flex flex-col gap-8 px-4 sm:px-8 md:px-16 md:pt-8 lg:flex-row">
+  <div className="w-full lg:w-1/2 flex flex-col gap-4">
+    <h1 className="text-2xl flex items-center font-semibold">
+      <MapPin className="h-10 w-10 text-red-500" />
+      Headquarter
+    </h1>
+    <p className="text-xl"> Timings: Mon-Sat 9am to 5pm</p>
+    <p className="text-base">
+      Enhaz Beverages Pvt. Ltd. D-09, Second Floor, Panchsheel Enclave,
+      Above HDFC Bank Ltd, Soami Nagar Branch, New Delhi - 110017
+    </p>
+  </div>
+  <iframe
+    src={embedLink}
+    width="600"
+    height="450"
+    style={{ border: 0 }}
+    allowFullScreen=""
+    loading="lazy"
+    className="w-full lg:w-1/2 rounded-lg"
+    referrerPolicy="no-referrer-when-downgrade"
+    title="Google Map Location"
+  ></iframe>
+</div>
+
 
         <hr />
 
         <div className="mb-4 flex flex-col lg:flex-row gap-8 mt-8 px-4 md:px-16">
-  {/* Left Section: Manufacturing Units */}
-  <div className="w-full lg:w-1/2 h-auto flex flex-col items-center justify-around">
-    <h1 className="text-2xl md:text-4xl text-center font-semibold">
-      Manufacturing Units
-    </h1>
-    {/* Manufacturing Unit 1 */}
-    <div className="w-full py-8 border-[1px] rounded-xl px-4 mt-4">
-      <p className="w-full flex text-xl items-center font-semibold text-gray-900">
-        <MapPin className="h-5 w-5 text-red-500" />
-        Manufacturing Unit 1
-      </p>
-      <p className="w-full text-base text-gray-700">Mon-Sat 9am to 5pm.</p>
-      <p className="text-sm font-medium">Uttarakhand</p>
-    </div>
-    {/* Manufacturing Unit 2 */}
-    <div className="w-full py-8 border-[1px] rounded-xl px-4 mt-4">
-      <p className="w-full flex text-xl items-center font-semibold text-gray-900">
-        <MapPin className="h-5 w-5 text-red-500" />
-        Manufacturing Unit 2
-      </p>
-      <p className="w-full text-base text-gray-700">Mon-Sat 9am to 5pm.</p>
-      <p className="text-sm font-medium">Jammu Katra</p>
-    </div>
-  </div>
-
-  {/* Right Section: Contact Form */}
-  <div className="w-full lg:w-1/2">
-    <div className="flex justify-center items-center flex-col">
-      <h1 className="pb-4 uppercase text-xl font-semibold text-center">
-        Our friendly team would love to hear from you
-      </h1>
-      <form className="w-full bg-white px-4 md:px-8 rounded-md">
-        {/* Contact for */}
-        <div className="mb-2">
-          <label
-            className="block text-gray-700 text-sm font-bold"
-            htmlFor="contactFor"
-          >
-            Contact for
-          </label>
-          <select
-            className="appearance-none border-2 border-gray-300 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-            id="contactFor"
-            defaultValue=""
-          >
-            <option value="" disabled>
-              Select Contact For
-            </option>
-            <option value="Stockiest">Stockiest</option>
-            <option value="Distributor">Distributor</option>
-            <option value="Whole sealer">Whole sealer</option>
-            <option value="Retailer">Retailer</option>
-          </select>
-        </div>
-
-        {/* Name Fields */}
-        <div className="flex flex-col md:flex-row mb-2">
-          <div className="w-full md:w-1/2 pr-0 md:pr-2 mb-2 md:mb-0">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="firstName"
-            >
-              First Name
-            </label>
-            <input
-              className="appearance-none border-2 border-gray-300 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              id="firstName"
-              type="text"
-              placeholder="First Name"
-            />
+          {/* Left Section: Manufacturing Units */}
+          <div className="w-full lg:w-1/2 h-auto flex flex-col items-center justify-around">
+            <h1 className="text-2xl md:text-4xl text-center font-semibold">
+              Manufacturing Units
+            </h1>
+            {/* Manufacturing Unit 1 */}
+            <div className="w-full py-8 border-[1px] rounded-xl px-4 mt-4">
+              <p className="w-full flex text-xl items-center font-semibold text-gray-900">
+                <MapPin className="h-5 w-5 text-red-500" />
+                Manufacturing Unit 1
+              </p>
+              <p className="w-full text-base text-gray-700">
+                Mon-Sat 9am to 5pm.
+              </p>
+              <p className="text-sm font-medium">Uttarakhand</p>
+            </div>
+            {/* Manufacturing Unit 2 */}
+            <div className="w-full py-8 border-[1px] rounded-xl px-4 mt-4">
+              <p className="w-full flex text-xl items-center font-semibold text-gray-900">
+                <MapPin className="h-5 w-5 text-red-500" />
+                Manufacturing Unit 2
+              </p>
+              <p className="w-full text-base text-gray-700">
+                Mon-Sat 9am to 5pm.
+              </p>
+              <p className="text-sm font-medium">Jammu Katra</p>
+            </div>
           </div>
-          <div className="w-full md:w-1/2 pl-0 md:pl-2">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="lastName"
-            >
-              Last Name
-            </label>
-            <input
-              className="appearance-none border-2 border-gray-300 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              id="lastName"
-              type="text"
-              placeholder="Last Name"
-            />
+
+          {/* Right Section: Contact Form */}
+          <div className="w-full lg:w-1/2">
+            <div className="flex justify-center items-center flex-col">
+              <h1 className="pb-4 uppercase text-xl font-semibold text-center">
+                Our friendly team would love to hear from you
+              </h1>
+              <form className="w-full bg-white px-4 md:px-8 rounded-md">
+                {/* Contact for */}
+                <div className="mb-2">
+                  <label
+                    className="block text-gray-700 text-sm font-bold"
+                    htmlFor="contactFor"
+                  >
+                    Contact for
+                  </label>
+                  <select
+                    className="appearance-none border-2 border-gray-300 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="contactFor"
+                    defaultValue=""
+                  >
+                    <option value="" disabled>
+                      Select Contact For
+                    </option>
+                    <option value="Stockiest">Stockiest</option>
+                    <option value="Distributor">Distributor</option>
+                    <option value="Whole sealer">Whole sealer</option>
+                    <option value="Retailer">Retailer</option>
+                  </select>
+                </div>
+
+                {/* Name Fields */}
+                <div className="flex flex-col md:flex-row mb-2">
+                  <div className="w-full md:w-1/2 pr-0 md:pr-2 mb-2 md:mb-0">
+                    <label
+                      className="block text-gray-700 text-sm font-bold mb-2"
+                      htmlFor="firstName"
+                    >
+                      First Name
+                    </label>
+                    <input
+                      className="appearance-none border-2 border-gray-300 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      id="firstName"
+                      type="text"
+                      placeholder="First Name"
+                    />
+                  </div>
+                  <div className="w-full md:w-1/2 pl-0 md:pl-2">
+                    <label
+                      className="block text-gray-700 text-sm font-bold mb-2"
+                      htmlFor="lastName"
+                    >
+                      Last Name
+                    </label>
+                    <input
+                      className="appearance-none border-2 border-gray-300 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      id="lastName"
+                      type="text"
+                      placeholder="Last Name"
+                    />
+                  </div>
+                </div>
+
+                {/* Contact Fields */}
+                <div className="flex flex-col md:flex-row mb-2">
+                  <div className="w-full md:w-1/2 pr-0 md:pr-2 mb-2 md:mb-0">
+                    <label
+                      className="block text-gray-700 text-sm font-bold mb-2"
+                      htmlFor="contact"
+                    >
+                      Contact
+                    </label>
+                    <input
+                      className="appearance-none border-2 border-gray-300 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      id="contact"
+                      type="text"
+                      placeholder="Contact"
+                    />
+                  </div>
+                  <div className="w-full md:w-1/2 pl-0 md:pl-2">
+                    <label
+                      className="block text-gray-700 text-sm font-bold mb-2"
+                      htmlFor="email"
+                    >
+                      Email
+                    </label>
+                    <input
+                      className="appearance-none border-2 border-gray-300 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      id="email"
+                      type="email"
+                      placeholder="Email"
+                    />
+                  </div>
+                </div>
+
+                {/* State and District */}
+                <div className="flex flex-col md:flex-row mb-2">
+                  <div className="w-full md:w-1/2 pr-0 md:pr-2 mb-2 md:mb-0">
+                    <label
+                      className="block text-gray-700 text-sm font-bold mb-2"
+                      htmlFor="state"
+                    >
+                      State
+                    </label>
+                    <input
+                      className="appearance-none border-2 border-gray-300 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      id="state"
+                      type="text"
+                      placeholder="State"
+                    />
+                  </div>
+                  <div className="w-full md:w-1/2 pl-0 md:pl-2">
+                    <label
+                      className="block text-gray-700 text-sm font-bold mb-2"
+                      htmlFor="districtArea"
+                    >
+                      District/Area
+                    </label>
+                    <input
+                      className="appearance-none border-2 border-gray-300 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      id="districtArea"
+                      type="text"
+                      placeholder="District, Area"
+                    />
+                  </div>
+                </div>
+
+                {/* Experience */}
+                <div className="mb-2">
+                  <label
+                    className="block text-gray-700 text-sm font-bold mb-2"
+                    htmlFor="experience"
+                  >
+                    Past Experience if any
+                  </label>
+                  <input
+                    className="appearance-none border-2 border-gray-300 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="experience"
+                    type="text"
+                    placeholder="Experience"
+                  />
+                </div>
+
+                {/* Message */}
+                <div className="mb-6">
+                  <label
+                    className="block text-gray-700 text-sm font-bold mb-2"
+                    htmlFor="message"
+                  >
+                    Text Message
+                  </label>
+                  <textarea
+                    className="appearance-none border-2 border-gray-300 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="message"
+                    rows="4"
+                    placeholder="Text Message"
+                  ></textarea>
+                </div>
+
+                {/* Submit Button */}
+                <div className="flex justify-center">
+                  <button
+                    type="submit"
+                    className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-
-        {/* Contact Fields */}
-        <div className="flex flex-col md:flex-row mb-2">
-          <div className="w-full md:w-1/2 pr-0 md:pr-2 mb-2 md:mb-0">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="contact"
-            >
-              Contact
-            </label>
-            <input
-              className="appearance-none border-2 border-gray-300 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              id="contact"
-              type="text"
-              placeholder="Contact"
-            />
-          </div>
-          <div className="w-full md:w-1/2 pl-0 md:pl-2">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="email"
-            >
-              Email
-            </label>
-            <input
-              className="appearance-none border-2 border-gray-300 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              id="email"
-              type="email"
-              placeholder="Email"
-            />
-          </div>
-        </div>
-
-        {/* State and District */}
-        <div className="flex flex-col md:flex-row mb-2">
-          <div className="w-full md:w-1/2 pr-0 md:pr-2 mb-2 md:mb-0">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="state"
-            >
-              State
-            </label>
-            <input
-              className="appearance-none border-2 border-gray-300 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              id="state"
-              type="text"
-              placeholder="State"
-            />
-          </div>
-          <div className="w-full md:w-1/2 pl-0 md:pl-2">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="districtArea"
-            >
-              District/Area
-            </label>
-            <input
-              className="appearance-none border-2 border-gray-300 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              id="districtArea"
-              type="text"
-              placeholder="District, Area"
-            />
-          </div>
-        </div>
-
-        {/* Experience */}
-        <div className="mb-2">
-          <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="experience"
-          >
-            Past Experience if any
-          </label>
-          <input
-            className="appearance-none border-2 border-gray-300 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-            id="experience"
-            type="text"
-            placeholder="Experience"
-          />
-        </div>
-
-        {/* Message */}
-        <div className="mb-6">
-          <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="message"
-          >
-            Text Message
-          </label>
-          <textarea
-            className="appearance-none border-2 border-gray-300 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-            id="message"
-            rows="4"
-            placeholder="Text Message"
-          ></textarea>
-        </div>
-
-        {/* Submit Button */}
-        <div className="flex justify-center">
-          <button
-            type="submit"
-            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Submit
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
       </div>
     </div>
   );
