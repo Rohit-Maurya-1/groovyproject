@@ -57,6 +57,7 @@ const CheckoutPage = () => {
         title: p.desc,
         price: p.price,
         quantity: p.quantity || 1,
+        image: q.image || ''
       }));
 
       const docRef = await addDoc(collection(db, "OrderCheckout"), {
