@@ -210,7 +210,7 @@ export default function Contact() {
         )}
         {/* Hero Map */}
         <div
-          className="px-16 pt-32 bg-fixed bg-contain bg-no-repeat bg-center "
+          className="px-4 sm:px-8 md:px-16 pt-32 bg-fixed bg-contain bg-no-repeat bg-center"
           style={{
             backgroundImage: `url(${bgg2})`,
           }}
@@ -221,17 +221,17 @@ export default function Contact() {
                 Get in touch
               </p>
             </div>
-            <div className="flex w-full">
-              <div className="w-1/2"></div>
-              <div className="w-1/2">
-                <div className=" grid grid-cols-1 gap-y-8 text-center sm:grid-cols-2 sm:gap-12 lg:grid-cols-2  backdrop-blur-sm">
+            <div className="w-full flex flex-col gap-8 px-4 sm:px-8 md:px-16 md:pt-8 lg:flex-row">
+              <div className="w-full lg:w-1/2"></div>
+              <div className="w-full lg:w-1/2">
+                <div className="grid grid-cols-1 gap-y-8 text-center sm:grid-cols-2 sm:gap-12 lg:grid-cols-2 backdrop-blur-sm">
                   <div className="border-zinc-800 border-2 py-4 px-4 rounded-xl">
                     <div className="mx-auto flex h w items-center justify-center rounded-full ">
-                      <GoMail className="h-9 w-9 text-green-500 " />
+                      <GoMail className="h-9 w-9 text-green-500" />
                     </div>
                     <p className="mt-2 text-xs text-black">
                       Please email contact form and we will be assist you. We
-                      wotk with you.
+                      work with you.
                     </p>
                     <h3
                       className="mt-2 text-base font-semibold text-black"
@@ -245,7 +245,7 @@ export default function Contact() {
                       <PiPhoneCall className="h-9 w-9 text-blue-500" />
                     </div>
                     <p className="mt-2 text-xs text-black">
-                      Please call us and we will be happy to assist you we work
+                      Please call us and we will be happy to assist you. We work
                       with you.
                     </p>
                     <h3 className="mt-2 text-base font-semibold text-black">
@@ -258,30 +258,29 @@ export default function Contact() {
           </div>
         </div>
         <div className="w-full flex flex-col gap-8 px-4 sm:px-8 md:px-16 md:pt-8 lg:flex-row">
-  <div className="w-full lg:w-1/2 flex flex-col gap-4">
-    <h1 className="text-2xl flex items-center font-semibold">
-      <MapPin className="h-10 w-10 text-red-500" />
-      Headquarter
-    </h1>
-    <p className="text-xl"> Timings: Mon-Sat 9am to 5pm</p>
-    <p className="text-base">
-      Enhaz Beverages Pvt. Ltd. D-09, Second Floor, Panchsheel Enclave,
-      Above HDFC Bank Ltd, Soami Nagar Branch, New Delhi - 110017
-    </p>
-  </div>
-  <iframe
-    src={embedLink}
-    width="600"
-    height="450"
-    style={{ border: 0 }}
-    allowFullScreen=""
-    loading="lazy"
-    className="w-full lg:w-1/2 rounded-lg"
-    referrerPolicy="no-referrer-when-downgrade"
-    title="Google Map Location"
-  ></iframe>
-</div>
-
+          <div className="w-full lg:w-1/2 flex flex-col gap-4">
+            <h1 className="text-2xl flex items-center font-semibold">
+              <MapPin className="h-10 w-10 text-red-500" />
+              Headquarter
+            </h1>
+            <p className="text-xl">Timings: Mon-Sat 9am to 5pm</p>
+            <p className="text-base">
+              Enhaz Beverages Pvt. Ltd. D-09, Second Floor, Panchsheel Enclave,
+              Above HDFC Bank Ltd, Soami Nagar Branch, New Delhi - 110017
+            </p>
+          </div>
+          <iframe
+            src={embedLink}
+            width="100%"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            className="w-full lg:w-1/2 rounded-lg"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Google Map Location"
+          ></iframe>
+        </div>
 
         <hr />
 

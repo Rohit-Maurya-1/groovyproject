@@ -194,7 +194,7 @@ const Nav = () => {
             <span className="relative">
               <LuShoppingCart className="text-xl" />
               <i className="absolute" style={{ top: -15, right: -10 }}>
-                {cartItems?.length ? cartItems?.length:''}
+                {cartItems?.length ? cartItems?.length : ""}
               </i>
             </span>
           </NavLink>
@@ -267,6 +267,15 @@ const Nav = () => {
             onClick={toggleMobileMenu}
           >
             Contact Us
+          </NavLink>
+          {/* Add-to-Cart Button */}
+          <NavLink to="/carts" className="block px-4 py-2 hover:bg-zinc-700">
+          <span className="relative">
+              <LuShoppingCart className="text-xl" />
+              <i className="absolute" style={{ top: -8, left: 16 }}>
+                {cartItems?.length ? cartItems?.length : ""}
+              </i>
+            </span>
           </NavLink>
         </div>
       )}
